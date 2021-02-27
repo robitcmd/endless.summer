@@ -1,0 +1,27 @@
+{
+  "name": "Surf",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Removes video timeout",
+  "homepage_url": "https://yomomma.com",
+  "icons": {
+    "16": "icons/1.png",
+    "48": "icons/1.png",
+    "128": "icons/1.png"
+  },
+  "default_locale": "en",
+    "options_page": "src/options/index.html",
+  "permissions": [
+    "https://www.surf2surf.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.surf2surf.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
